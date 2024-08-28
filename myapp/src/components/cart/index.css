@@ -1,0 +1,36 @@
+.checkout{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.cart-items-container{
+    width: 70%;
+}
+.price{
+    margin-left: 25px;
+    font-weight: bold;
+}
+.name{
+    width: 30%;
+    display: flex;
+    color: #9095A0FF;
+    font-weight: bold;
+}
+.total{
+    width: 30%;
+    color: #9095A0FF;
+    font-weight: bold;
+}
+.delete-icon{
+    font-size: 30px;
+    color: black;
+}
+.quantity1{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+}
+.container2{
+    display: flex;
+}

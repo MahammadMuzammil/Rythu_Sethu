@@ -1,0 +1,109 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+   border: 1px solid gray;
+    margin: 35px;
+    width: 250px;
+    /* padding: 10px; */
+}
+.product-img{
+    height: 200px;
+    width: 250px;
+}
+.align-name-cost{
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    padding: 10px;
+}
+.product-name{
+    color: #171A1FFF;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+}
+.product-cost{
+    color: #00BDD6FF;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 20px;
+}
+.choose-size{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    align-items: flex-start;
+    padding: 10px;
+}
+.size-select{
+    background-color: #F3F4F6FF;
+    padding: 2px;
+    border-width: 0px;
+    width: 100px;
+    height: 40px;
+}
+.size-select:focus{
+    outline: none;
+}
+.choose-size p{
+    margin: 0px;
+    color: gray;
+    font-weight: bold;
+}
+.increment-decrement-container{
+    display: flex;
+    align-items: center;
+    width: 120%;
+    justify-content: space-between;
+}
+.increment-decrement-container p {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.quantity{
+    background-color: #DEE1E6FF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+}
+.choose-quantity{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.choose-quantity p{
+    margin: 0px;
+    color: gray;
+}
+.cart-btn{
+    display: flex;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    align-self: center;
+    border: 1px solid #117B34FF;
+    background-color: #EEFDF3FF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.cart-icon{
+    color: green;
+    font-size: 30px;
+}
+.cart-btn p{
+    color: #117B34FF;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}

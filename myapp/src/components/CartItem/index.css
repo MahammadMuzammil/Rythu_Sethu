@@ -1,0 +1,23 @@
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkout-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+.name p{
+    margin-left: 10px;
+}
+.check-name{
+    width: 30%;
+    display: flex;
+    color: black;
+    font-weight: bold;
+}
+.check-name p{
+    margin-left: 10px;
+
+}
