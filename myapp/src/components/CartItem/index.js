@@ -5,7 +5,7 @@ import CartContext from '../../context';
 
 const CartItem = (props) => {
     const { product } = props
-    const { name, img_url, quantity, cost, original_cost, id } = product
+    const { name, img_url, total_quantity, cost, original_cost, id } = product
     console.log('hello')
 
     return (
@@ -22,9 +22,9 @@ const CartItem = (props) => {
                             <p  >{name}</p>
                         </div>
                         <p className='quantity1'>{original_cost}/-</p>
-                        <p className='quantity1'>{quantity}</p>
+                        <p className='quantity1'>{total_quantity}Kg</p>
                         <div className="total">
-                            <p>{cost}/-</p>
+                            <p>{total_quantity*original_cost}/-</p>
                             <MdDelete className='delete-icon' onClick={handleOnClick} />
                         </div>
                     </li>

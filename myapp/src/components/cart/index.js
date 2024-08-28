@@ -10,6 +10,7 @@ const Cart = () => {
             {value => {
                 const { cartList } = value
                 console.log(cartList)
+                const totalAmount = cartList.reduce((acc,curr)=> (acc+ curr.total_quantity*curr.original_cost),0 )
                 return (
                     <div className="cart-background">
 
@@ -26,7 +27,14 @@ const Cart = () => {
                                 </ul>
                                 <img src="Container 31.jpg" />
                             </div>
+                            <div className="payment">
                             <img src="Container 28.jpg"/>
+                            <div className="checkout-card">
+                                <h1>Total Items  :<span className="total-items">{cartList.length}</span>  </h1>
+                                <h1>Amount :<span className="total-amount">{totalAmount}/-</span></h1>
+                            </div>
+                            </div>
+
                         </div>
 
                         <img src="Container 34.jpg" />

@@ -53,7 +53,7 @@
 .increment-decrement-container{
     display: flex;
     align-items: center;
-    width: 120%;
+    width: 100%;
     justify-content: space-between;
 }
 .increment-decrement-container p {

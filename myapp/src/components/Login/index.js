@@ -31,12 +31,13 @@ class Login extends Component {
             const user = usersList.find(eachUser => eachUser.email === email)
             console.log(user)
             if (user !== undefined) {
+                localStorage.setItem('user_type',user.user_type)
                 if (user.password === password) {
-                    if(user.user_type==='CONSUMER'){
+                    if (user.user_type === 'CONSUMER') {
 
                         history.replace('/consumerlist')
                     }
-                    else{
+                    else {
                         history.replace('/farmerlist')
                     }
 

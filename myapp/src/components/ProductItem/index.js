@@ -10,8 +10,8 @@ class ProductItem extends Component {
         quantity: 1,
         size:1
     }
-    onChangeSize=()=>{
-        this.setState(prevState=>({size:prevState.size+1}))
+    onChangeSize=(e)=>{
+        this.setState({size:e.target.value})
     }
     increaseQuantity = () => {
         this.setState(prevState => ({ quantity: prevState.quantity + 1 }))
@@ -27,8 +27,9 @@ class ProductItem extends Component {
 
     render() {
         const { quantity ,size} = this.state
+        console.log(size*quantity)
         const { product } = this.props
-        const { cost, name, id } = product
+        const { original_cost, name, id } = product
         
 
         return (
@@ -38,7 +39,8 @@ class ProductItem extends Component {
                 {value => {
                     const { addCartItem } = value
                     const handleOnClick = () => {
-                        addCartItem({ ...product, quantity,size,cost:cost*quantity*size })
+                        const total_quantity =quantity*size
+                        addCartItem({ ...product, total_quantity })
                     }
 
                     return (
@@ -46,7 +48,7 @@ class ProductItem extends Component {
                             <img src={product.img_url} className="product-img" />
                             <div className="align-name-cost">
                                 <p className='product-name'>{name}</p>
-                                <p className='product-cost'>{cost}/-</p>
+                                <p className='product-cost'>{original_cost}/-</p>
                             </div>
                             <div className="size-quantity">
 
@@ -63,7 +65,7 @@ class ProductItem extends Component {
                                     <div className="increment-decrement-container">
                                         <button onClick={this.increaseQuantity}>+</button>
                                         <span className='quantity'>{quantity}</span>
-                                        <button onClick={this.decreaseQuantity}>--</button>
+                                        <button onClick={this.decreaseQuantity}>-</button>
                                     </div>
                                 </div>
                             </div>

@@ -3,4 +3,5 @@
     flex-wrap: wrap;
     /* width: 70%; */
     justify-content: center;
+    list-style-type: none;
 }

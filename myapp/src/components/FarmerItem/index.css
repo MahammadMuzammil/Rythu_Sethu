@@ -1,0 +1,27 @@
+.minimumprice{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+}
+.price{
+    color: #00BDD6FF;
+}
+.setprice{
+    display: flex;
+    justify-content: space-between;
+}
+.increment-decrement-price{
+    display: flex;
+    align-items: center;
+}
+.updatedprice{
+    background-color: lightgray;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}

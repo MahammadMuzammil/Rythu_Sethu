@@ -1,0 +1,158 @@
+.motto-section {
+  background-color: #f0f8e8; /* Light green background */
+  padding: 50px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.motto-container {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.motto-title {
+  font-size: 36px;
+  color: #4682b4; /* Steel blue color */
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideDown 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.motto-text {
+  font-size: 24px;
+  color: #a52a2a; /* Brick red color */
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  font-family: "Merriweather", serif;
+  opacity: 0;
+  animation: slideUp 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+.quote-left {
+  font-size: 40px;
+  position: absolute;
+  left: -30px;
+  top: -10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+.quote-right {
+  font-size: 40px;
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 1.4s;
+}
+
+/* Background Design */
+.motto-section::before,
+.motto-section::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #32cd32; /* Lime green color */
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.7;
+  transform: scale(0.5);
+  animation: scaleUp 4s ease-in-out infinite alternate;
+}
+
+.motto-section::before {
+  top: 0;
+  left: -50px;
+}
+
+.motto-section::after {
+  bottom: 0;
+  right: -50px;
+}
+
+/* Dot pattern */
+.motto-section .dot-pattern {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0;
+  animation: fadeInDots 3s ease-in-out forwards;
+}
+
+.motto-section .dot-pattern.dot-left {
+  top: 20px;
+  left: 100px;
+  animation-delay: 1.5s;
+}
+
+.motto-section .dot-pattern.dot-right {
+  bottom: 20px;
+  right: 100px;
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDots {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
